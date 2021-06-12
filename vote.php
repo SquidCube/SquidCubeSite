@@ -1,3 +1,15 @@
+<?php
+    require_once('Rcon.php');
+
+    $host = '149.202.149.138'; // Server host name or IP
+    $port = 30360;                      // Port rcon is listening on
+    $password = 'PassTest'; // rcon.password setting set in server.properties
+    $timeout = 3;                       // How long to timeout.
+    
+    use Thedudeguy\Rcon;
+
+?>
+
 <!DOCTYPE html>
     <html>
         <head>
@@ -7,17 +19,6 @@
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
             <link rel="javascript" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
             <link rel="javascript" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js">
-            <script language="javascript">
-                function Login(){
-                    var pseudo=document.reg.pseudo.value;
-                    if (username=="xanachocolat") {
-                        window.location"index.html";
-                    }
-                    else {
-                        window.alert("Tu n'est pas dans la base de donnée");
-                    }
-                  }
-              </script>
         </head>
         <body class="bg-custom2">
             <div>
@@ -33,7 +34,7 @@
                         <a class="nav-link" href="index.html">Accueil</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="vote.html">Voter
+                        <a class="nav-link" href="vote.php">Voter
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
@@ -53,27 +54,22 @@
                 <p id="desc" class="text-muted">Vote sur les différents sites web ci-dessous<br>pour gagner des récompenses.</p>
             </div>
             <br />
-          <script language="javascript">
-            function controle(form1) {
-            var pseudo = document.form1.input.value;
-
-            if (pseudo == "xanachocolat") {
-                alert("Tu est xanachocolat");
-            }
-
-            else {
-                alert("Tu n'est pas xanachocolat");
-            }
-        }
-            </SCRIPT>
             <center>
-            <form name="form1">
-            <input type="text" class="input_field"  name="input" value="Pseudo Minecraft" onFocus="this.value='';">
+            <form name="form1" method="post">
+            <input type="text" class="input_field"  name="pseudo" placeholder="Pseudo Minecraft">
             <br>
             <br>
-            <input type="button" name="bouton" value="Suivant" onClick="controle(form1)">
+            <input type="submit" name="bouton" value="Suivant">
             </form>
             </center>
+            <?php
+                $rcon = new Rcon($host, $port, $password, $timeout);
+                $pseudo = $_POST['pseudo'];
+                if ($rcon->connect())
+                    {
+                    $rcon->sendCommand("advote $pseudo 1");
+                    }
+            ?>
             
             
             <footer class="bg-light">
