@@ -38,8 +38,36 @@
                 </div>
             </nav>
             
-          
-
+            <div>
+                <script language="javascript">
+                    function Login(){
+                        var pseudo=document.reg.pseudo.value;
+                        if (username=="xanachocolat") {
+                            window.location"index.html";
+                        }
+                        else {
+                            window.alert("Tu n'est pas dans la base de donnée");
+                        }
+                      }
+                  </script>
+                <p class="title">Voter</p>
+                <p id="desc" class="text-muted">Vote sur les différents sites web ci-dessous<br>pour gagner des récompenses.</p>
+            </div>
+            <br />
+            <div class="input">
+            <form name="reg">
+            <label class="input_label">Pseudo Minecraft : </span><input value="ex: xanachocolat" onFocus="this.value='';" name="pseudo" class="input_field" id="pseudo">
+            </div>
+            <br />
+            <br />
+            <br />
+            <center>
+            <div class="vote valider">
+                <input type="button" name="next" onClick="Login()" value="Continuer">
+            </div>
+        </center>
+          </form>
+            
             
             <footer class="bg-light">
                 <div class="bg-light py-4">
