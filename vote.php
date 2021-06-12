@@ -1,10 +1,10 @@
 <?php
     require_once('Rcon.php');
 
-    $host = '149.202.149.138'; // Server host name or IP
-    $port = 30360;                      // Port rcon is listening on
-    $password = 'PassTest'; // rcon.password setting set in server.properties
-    $timeout = 3;                       // How long to timeout.
+    $host = '149.202.149.138'; 
+    $port = 30360;                    
+    $password = 'PassTest';
+    $timeout = 3;               
     
     use Thedudeguy\Rcon;
 
@@ -14,6 +14,7 @@
     <html>
         <head>
             <title>Voter - SquidCube</title>
+            <meta charset="UTF-8">
             <link rel="stylesheet" href="style.css">
             <link rel="icon" href="sources/favicon.png">
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
