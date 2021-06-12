@@ -7,7 +7,17 @@
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
             <link rel="javascript" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
             <link rel="javascript" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js">
-
+            <script language="javascript">
+                function Login(){
+                    var pseudo=document.reg.pseudo.value;
+                    if (username=="xanachocolat") {
+                        window.location"index.html";
+                    }
+                    else {
+                        window.alert("Tu n'est pas dans la base de donnée");
+                    }
+                  }
+              </script>
         </head>
         <body class="bg-custom2">
             <div>
@@ -39,34 +49,31 @@
             </nav>
             
             <div>
-                <script language="javascript">
-                    function Login(){
-                        var pseudo=document.reg.pseudo.value;
-                        if (username=="xanachocolat") {
-                            window.location"index.html";
-                        }
-                        else {
-                            window.alert("Tu n'est pas dans la base de donnée");
-                        }
-                      }
-                  </script>
                 <p class="title">Voter</p>
                 <p id="desc" class="text-muted">Vote sur les différents sites web ci-dessous<br>pour gagner des récompenses.</p>
             </div>
             <br />
-            <div class="input">
-            <form name="reg">
-            <label class="input_label">Pseudo Minecraft : </span><input value="ex: xanachocolat" onFocus="this.value='';" name="pseudo" class="input_field" id="pseudo">
-            </div>
-            <br />
-            <br />
-            <br />
+          <script language="javascript">
+            function controle(form1) {
+            var pseudo = document.form1.input.value;
+
+            if (pseudo == "xanachocolat") {
+                alert("Tu est xanachocolat");
+            }
+
+            else {
+                alert("Tu n'est pas xanachocolat");
+            }
+        }
+            </SCRIPT>
             <center>
-            <div class="vote valider">
-                <input type="button" name="next" onClick="Login()" value="Continuer">
-            </div>
-        </center>
-          </form>
+            <form name="form1">
+            <input type="text" class="input_field"  name="input" value="Pseudo Minecraft" onFocus="this.value='';">
+            <br>
+            <br>
+            <input type="button" name="bouton" value="Suivant" onClick="controle(form1)">
+            </form>
+            </center>
             
             
             <footer class="bg-light">
