@@ -1,63 +1,3 @@
-body {
-    margin: 0;
-    padding: 0;
-}
-
-.image  {
-}
-
-footer {
-    position: absolute; bottom: 0; left: 0; right: 0;
-    color:aliceblue;
-}
-
-.pseudo {
-    text-align: center;
-
-}
-
-.valider {
-    text-align: center;
-    position:relative;
-    margin-left: 45%;
-}
-
-.nolink {
-    text-align: center;
-    text-decoration: none;
-    padding: 10px;
-}
-
-.input {
-  margin-left: 40%;
-  position: relative;
-}
-
-.input_label {
-  color:#616161;
-  position: absolute;
-  top: 20px;
-  @include transition(all 0.3s);
-}
-
-.input_field {
-  border: 0;
-  padding: 0;
-  z-index: 1;
-  background-color: transparent;
-  border-bottom: 2px solid #eee;
-  font: inherit;
-  font-size: 14px;
-  line-height: 30px;
-  &:focus, &:valid ;
-    outline: 0;
-    border-bottom-color: #665856;
-    &+.input_label ;
-      color: #665856;
-      @include transform(translateY(-25px));
-}
-
-
 .title {
     position: relative;
     color:#616161;
@@ -67,22 +7,11 @@ footer {
     text-align: center;
 }
 
-#title {
-    position: relative;
-    color:mediumseagreen;
-    margin-top: 5%;
-    font-size: 60px;
-    font-weight: 650;
+.desc {
     text-align: center;
 }
 
-#ip {
-    position: relative;
-    margin-top: 5%;
-    text-align: center;
-}
-
-.bn3 {
+.btn1 {
     display: inline-block;
     padding: 0.5em 1.7em;
     margin: 0 0.1em 0.1em 0;
@@ -98,42 +27,30 @@ footer {
     transition: all 0.2s;
   }
   
-.bn3:hover {
+.btn1:hover {
     color: white;
     background-color: rgb(54, 54, 54);
     text-decoration: none;
   }
 
-#desc {
+.btn2 {
+    display: inline-block;
+    padding: 0.5em 1.7em;
+    margin: 0 0.1em 0.1em 0;
+    border: 0.16em solid rgb(54, 54, 54);
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: rgb(54, 54, 54);
+    text-shadow: 0 0.04em 0.04em rgba(255, 255, 255, 0.253);
     text-align: center;
-}
-
-.default-color {
-    color: #18D588;
+    transition: all 0.2s;
+  }
+  
+.btn2:hover {
+    color: white;
+    background-color: rgb(54, 54, 54);
     text-decoration: none;
 }
-
-.bg-custom2 {
-    background-color: #E5E5E5;
-}
-
-.bg-custom {
-    background-color: cornsilk;
-}
-
-#header {
-    display: block;
-    background-color: #616161;
-    height: 100px;
-    width: 100%;
-}
-
-.carousel-item {
-    height: 65vh;
-    min-height: 350px;
-    background: no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
